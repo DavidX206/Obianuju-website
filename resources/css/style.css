@@ -1,0 +1,672 @@
+/* Base color: #095e48*/
+/* complementary     color:   */
+/* base font-size: 20px */
+
+/* --------------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* --------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------------- */
+
+.row {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+/* ------- ICONS -------- */
+
+.icon-small {
+  font-size: 110%;
+  color: #a3a3a3;
+  padding: 5px 5px;
+  border-radius: 50%;
+}
+
+/* ------- BUTTONS -------- */
+
+.btn {
+  background-color: #095e48;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  font-size: 100%;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+/* --------------------------------------------- */
+
+h2 {
+  font-size: 210%;
+  color: #095e48;
+  text-align: center;
+  width: 100%;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 100%;
+  word-spacing: 0.075rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box p {
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --------------------------------------------- */
+/* HEADER */
+/* --------------------------------------------- */
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.81), rgba(0, 0, 0, 0.56)),
+    url(img/matias-north-v8DSLoY80Xk-unsplash-min.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  min-height: 950px;
+  background-position: top;
+  position: relative;
+}
+
+.header-body {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+}
+
+/* ------- Header text animation -------- */
+
+.header-text {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: rgba(147, 147, 147, 0.87);
+
+  margin: 0 auto 50px auto;
+  width: 24em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.anim-typewriter {
+  animation: typewriter 8s steps(200) 2s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* ----------------------------------------- */
+
+.header-figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-body figure {
+  width: 45%;
+  height: auto;
+  margin-right: 50px;
+}
+
+.header-body figure:last-of-type img {
+  width: 110%;
+}
+
+.header-body figure:first-of-type img {
+  width: 40%;
+}
+
+/* ------- main navi -------- */
+
+.author-name {
+  position: relative;
+  float: left;
+  margin: 15px 0;
+  margin-left: 5%;
+  font-family: "Dancing Script", cursive;
+  font-size: 310%;
+  vertical-align: middle;
+}
+
+nav {
+  /*background-color: #095e48;*/
+}
+
+.nav {
+  color: #dfe6e9;
+  max-width: 1400px;
+}
+
+.social-links,
+.navigation {
+  list-style: none;
+}
+
+.social-links li,
+.navigation li {
+  display: inline-block;
+}
+
+.main-navi {
+  position: relative;
+  float: right;
+  text-align: right;
+  vertical-align: bottom;
+  margin: 20px 10% 10px 0;
+}
+
+.navigation {
+  margin-top: 10px;
+  font-size: 110%;
+}
+.social-links li a,
+.navigation li a {
+  color: #dfe6e9;
+}
+
+.navigation li {
+  margin-left: 30px;
+}
+
+.social-links li {
+  margin-left: 15px;
+}
+.social-links {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.bi-facebook,
+.bi-instagram,
+.bi-twitter,
+.bi-linkedin {
+  transition: color 0.3s, transform 0.2s;
+}
+
+.bi-facebook:hover {
+  color: #0a66c2;
+}
+
+.bi-instagram:hover {
+  color: #cd486b;
+}
+
+.bi-twitter:hover {
+  color: #1da1f2;
+}
+
+.bi-linkedin:hover {
+  color: #0a66c2;
+}
+
+.navigation li a:link,
+.navigation li a:visited {
+  transition: color 0.3s;
+}
+
+.navigation li a:hover,
+.navigation li a:active {
+  color: #f39c12;
+}
+
+/* --------------------------------------------- */
+/* SECTION BIO */
+/* --------------------------------------------- */
+
+.author-img {
+  width: 95%;
+  height: auto;
+  text-align: right;
+}
+
+/* --------------------------------------------- */
+/* SECTION BOOKS */
+/* --------------------------------------------- */
+
+.section-book {
+  background-color: #f6f6f6;
+  color: #000;
+  position: relative;
+  margin: auto;
+}
+
+.book-img {
+  width: 90%;
+}
+
+.book-summary {
+  margin-right: 70px;
+}
+
+.prize-img {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.prize-summary {
+  width: 100%;
+}
+
+.carousel-cell figcaption {
+  font-size: 95%;
+  word-spacing: 1.5px;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.carousel-cell figure {
+  text-align: center;
+}
+
+.carousel-cell figure img {
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+/* ------- Slideshow -------- */
+
+.carousel-cell {
+  width: 100%;
+}
+
+/* at media query
+.c--cell {
+    padding: 0 80px;
+}
+*/
+
+/* --------------------------------------------- */
+/* SECTION REVIEWS */
+/* --------------------------------------------- */
+
+.section-reviews {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.79)),
+    url(img/teenager-reading-on-sofa.jpg);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-reviews p {
+  font-family: "Dancing Script", cursive;
+  font-size: 200%;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.section-reviews h2 {
+  margin-bottom: 2rem;
+  color: #f39c12;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 900%;
+  font-family: Georgia, serif;
+  color: #095e48;
+  margin-bottom: -10px;
+  display: block;
+}
+
+blockquote {
+  quotes: "“" "”";
+  margin-bottom: 1rem;
+  font-size: 95%;
+  word-spacing: 0.025rem;
+  letter-spacing: 0.025rem;
+  line-height: 1.4rem;
+}
+
+.reviews {
+  opacity: 0;
+}
+
+/* --------------------------------------------- */
+/* SECTION SHOP */
+/* --------------------------------------------- */
+
+.shop-book img {
+  width: 95%;
+}
+
+.shop-book {
+  margin-right: 50px;
+  margin-bottom: -30px;
+  text-align: right;
+}
+
+.shop-btn:link,
+.shop-btn:visited {
+  display: block;
+}
+
+.shop-btn:hover,
+.shop-btn:active {
+  background-color: #000;
+}
+
+.bookpeddler img {
+  width: 50%;
+}
+
+.rovingheights img {
+  width: 50%;
+}
+
+.bookpeddler,
+.rovingheights {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bookshops {
+  width: 50%;
+}
+
+.bookshops p {
+  color: #000;
+  font-size: 225%;
+  font-family: "Dancing Script", cursive;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.bookstores p {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.bookstores ul {
+  text-align: center;
+}
+
+.bookstores li {
+  display: inline-block;
+  margin-right: 0px;
+  border-right: 2px solid #000;
+  padding: 0px 5px 0px 0px;
+}
+
+.bookstores a:link,
+.bookstores a:visited {
+  color: #095e48;
+  font-size: 100%;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.bookstores a:hover,
+.bookstores a:active {
+  color: #f39c12;
+}
+
+.bookstores li:last-child {
+  border: none;
+}
+
+/* --------------------------------------------- */
+/* SECTION CONTACT */
+/* --------------------------------------------- */
+
+.section-contact {
+  background-color: #f6f6f6;
+  color: #000;
+  position: relative;
+  margin: auto;
+}
+
+.section-contact p {
+  width: 100%;
+  text-align: center;
+}
+
+.section-contact p:last-of-type {
+  margin-top: 30px;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-size: 80%;
+}
+
+input[type="submit"] {
+  background-color: #f39c12;
+  cursor: pointer;
+  color: #000;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 0 1rem;
+  height: 100%;
+  border-radius: 1.5rem;
+  font-size: 85%;
+  font-weight: 400;
+  transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ------- Newsletter -------- */
+
+h3 {
+  font-size: 180%;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+.news-form input[type="email"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  height: 100%;
+}
+
+.news-email {
+  flex: 0 0 50%;
+  margin-right: 20px;
+}
+
+.news {
+  background-color: rgba(0, 0, 0, 0.7);
+  vertical-align: middle;
+  padding: 2rem 0;
+  width: 80%;
+  margin: 1.5rem auto 0 10%;
+  border-radius: 10px;
+}
+
+.news-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 2.5rem;
+}
+
+.news-error {
+  text-align: center;
+  color: #eed202;
+  font-size: 80%;
+  margin: 10px 0 -5px 0;
+}
+
+/* ------- Contact form -------- */
+
+label {
+  display: block;
+  margin: 0.75rem 0 7px 0;
+  font-size: 85%;
+}
+
+.contact {
+  width: 45%;
+}
+
+.contact-field {
+  width: 100%;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  height: 40px;
+  border: 0.5px solid #000;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 75%;
+  color: #000;
+}
+
+.contact-form textarea {
+  height: 7.5rem;
+  font-weight: 400;
+  font-family: inherit;
+  resize: none;
+}
+
+.contact-submit {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #095e48;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  transition: 0.5s;
+  margin-top: 0.5rem;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #000;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.contact-submit span {
+  margin-top: 10px;
+  color: #cc0000;
+  font-size: 80%;
+}
+
+/* ------- Social media logos -------- */
+
+.social-images {
+  margin-top: 0.75rem;
+  margin-left: 3.5rem;
+}
+
+.social-image {
+  display: block;
+  width: 75%;
+  margin-bottom: 1.5rem;
+}
+
+.error-text {
+  color:#cc0000;
+  font-size: 75%;
+  margin-bottom: -20px;
+  }
+
+.disabled {
+  pointer-events: none;
+}
