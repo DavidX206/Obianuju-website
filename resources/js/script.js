@@ -1,3 +1,10 @@
+
+let height = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+//document.querySelector('header').style.minHeight = height;
+
+
 // SLIDESHOW
 let slide = document.getElementsByClassName("carousel-cell");
 let slideHeight = slide[0].offsetHeight;
@@ -114,11 +121,11 @@ form.onsubmit = (e) => {
         statusBtn.style.backgroundColor = "#000";
 
       } else if (!(responseText == "Email field required" || responseText == "Enter a valid email address!")){
-        statusTxt.style.display = "block"
+        //statusTxt.style.display = "block"
         statusTxt.innerText = "Your message failed to send, Please try again later"
 
         setTimeout(() => {
-          statusTxt.style.display = "none";
+          //statusTxt.style.display = "none";
           statusTxt.innerText = ""
         }, 5000);
 
@@ -180,10 +187,14 @@ newsForm.onsubmit = (e) => {
     if (xhr.readyState == 4 && xhr.status == 200) {
 
       if (responseText == "Saved") {
-        signUp.value = "Sent"
+        signUp.value = "Done"
         signUp.style.backgroundColor = "#000";
         signUp.style.color = "#fff"
         newsForm.reset();
+        setTimeout(() => {
+          document.querySelector('.news-inner').classList.add('flip')
+        }, 1500);
+        
 
       } else if (responseText == "Email already exists") {
         newsStatus.innerText = "This email address has already been subscribed"
@@ -204,3 +215,6 @@ newsForm.onsubmit = (e) => {
   xhr.send(formData);
   xhr.res;
 };
+
+
+
