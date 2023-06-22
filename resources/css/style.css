@@ -35,7 +35,7 @@ body {
 
 .row {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 100%;
 }
 
 section {
@@ -159,6 +159,7 @@ header {
   color: rgba(147, 147, 147, 0.87);
 
   margin: 0 auto 50px auto;
+  max-width: 100%;
   width: 24em;
   text-align: center;
   white-space: nowrap;
@@ -191,6 +192,7 @@ header {
 
 .header-figure {
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -229,11 +231,11 @@ header {
 
 nav {
   /*background-color: #095e48;*/
+
 }
 
 .nav {
   color: #dfe6e9;
-  max-width: 1400px;
 }
 
 .social-links,
@@ -306,6 +308,10 @@ nav {
 .navigation li a:hover,
 .navigation li a:active {
   color: #f39c12;
+}
+
+.res-name{
+  display: none;
 }
 
 /* --------------------------------------------- */
@@ -425,6 +431,7 @@ blockquote {
 
 .reviews {
   opacity: 0;
+  display: flex;
 }
 
 /* --------------------------------------------- */
